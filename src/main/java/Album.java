@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,37 +22,22 @@ public final class Album implements Performance {
         this.musicians = new ArrayList<>(musicians);
     }
 
-    /**
-     * @return the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @return the tracks
-     */
     public Stream<Track> getTracks() {
         return tracks.stream();
     }
 
-    /**
-     * Used in imperative code examples that need to iterate over a list
-     */
     public List<Track> getTrackList() {
         return unmodifiableList(tracks);
     }
 
-    /**
-     * @return the musicians
-     */
     public Stream<Artist> getMusicians() {
         return musicians.stream();
     }
 
-    /**
-     * Used in imperative code examples that need to iterate over a list
-     */
     public List<Artist> getMusicianList() {
         return unmodifiableList(musicians);
     }

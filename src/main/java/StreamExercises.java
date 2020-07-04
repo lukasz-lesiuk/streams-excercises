@@ -2,7 +2,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class StreamExcercies {
+public class StreamExercises {
 
     public int addUp(List<Integer> numbers) {
         return 0;

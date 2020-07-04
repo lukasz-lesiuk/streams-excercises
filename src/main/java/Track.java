@@ -1,5 +1,5 @@
 public final class Track {
-    
+
     private final String name;
     private final int length;
 
@@ -8,16 +8,10 @@ public final class Track {
         this.length = length;
     }
 
-    /**
-     * @return the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @return the length of the track in milliseconds.
-     */
     public int getLength() {
         return length;
     }
