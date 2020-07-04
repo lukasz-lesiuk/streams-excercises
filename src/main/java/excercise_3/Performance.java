@@ -1,3 +1,5 @@
+package excercise_3;
+
 import java.util.stream.Stream;
 
 public interface Performance {

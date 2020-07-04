@@ -1,3 +1,5 @@
+package excercise_3;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
@@ -24,6 +26,10 @@ public class StreamExercises {
         }
 
         return totalMembers;
+    }
+
+    public int calculateMembersLambdaWay(List<Artist> artists) {
+        return 0;
     }
 
 }
