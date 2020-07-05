@@ -1,4 +1,4 @@
-package excercise_3;
+package excercises.excercise_3;
 
 import java.util.Collections;
 import java.util.List;
