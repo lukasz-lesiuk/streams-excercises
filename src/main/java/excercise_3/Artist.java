@@ -4,16 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Stream;
-
-import static java.util.stream.Collectors.toList;
 
 public final class Artist {
-    
+
     private String name;
     private List<Artist> members;
     private String nationality;
-    
+
     public Artist(String name, String nationality) {
         this(name, Collections.emptyList(), nationality);
     }
@@ -31,8 +28,8 @@ public final class Artist {
         return name;
     }
 
-    public Stream<Artist> getMembers() {
-        return members.stream();
+    public List<Artist> getMembers() {
+        return members;
     }
 
     public String getNationality() {
@@ -50,11 +47,6 @@ public final class Artist {
     @Override
     public String toString() {
         return getName();
-    }
-
-    public Artist copy() {
-        List<Artist> members = getMembers().map(Artist::copy).collect(toList());
-        return new Artist(name, members, nationality);
     }
 
 }

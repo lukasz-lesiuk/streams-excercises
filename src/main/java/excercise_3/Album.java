@@ -6,10 +6,9 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 import static java.util.Collections.unmodifiableList;
-import static java.util.stream.Collectors.toList;
 
 public final class Album implements Performance {
-    
+
     private String name;
     private List<Track> tracks;
     private List<Artist> musicians;
@@ -46,12 +45,6 @@ public final class Album implements Performance {
 
     public Artist getMainMusician() {
         return musicians.get(0);
-    }
-
-    public Album copy() {
-        List<Track> tracks = getTracks().map(Track::copy).collect(toList());
-        List<Artist> musicians = getMusicians().map(Artist::copy).collect(toList());
-        return new Album(name, tracks, musicians);
     }
 
 }

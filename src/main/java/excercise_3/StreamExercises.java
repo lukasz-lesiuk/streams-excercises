@@ -14,15 +14,15 @@ public class StreamExercises {
         return Collections.emptyList();
     }
 
-    public List<Album> getAlbumsWithAtMoseThreeTracks(List<Album> albums) {
+    public List<Album> getAlbumsWithAtMostThreeTracks(List<Album> albums) {
         return Collections.emptyList();
     }
 
     public int calculateMembers(List<Artist> artists) {
         int totalMembers = 0;
         for (Artist artist : artists) {
-            Stream<Artist> members = artist.getMembers();
-            totalMembers += members.count();
+            List<Artist> members = artist.getMembers();
+            totalMembers += members.size();
         }
 
         return totalMembers;
