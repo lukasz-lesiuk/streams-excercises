@@ -1,4 +1,4 @@
-package excercise_2;
+package excercises.excercise_2;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
