@@ -7,20 +7,18 @@ import java.util.function.Supplier;
 
 public class Lambdas {
 
-    public Predicate predicate() {
-        return null;
+    public static Predicate<Integer> hasThreeApples = (n) -> (n == 3);
+
+    public Consumer<String> giveColor() {
+        return color -> System.out.println("color is " + color);
     }
 
-    public Consumer consumer() {
-        return null;
+    public Function<String, String> makeItLouder() {
+        return scream -> scream + "A";
     }
 
-    public Function function() {
-        return null;
-    }
-
-    public Supplier supplier() {
-        return null;
+    public Supplier<String> scream() {
+        return () -> "AAA";
     }
 
 }

@@ -1,5 +1,9 @@
 import excercises.excercise_1.Action;
 import excercises.excercise_1.Lama;
+import excercises.excercise_2.Lambdas;
+
+import java.util.function.Predicate;
+
 
 public class Main {
 
@@ -16,10 +20,12 @@ public class Main {
         lama.performLamaAction(new Action() {
             @Override
             public void perform() {
-                lama.setState("sitting");
-                System.out.println("lama is now " + lama.getState());
+                lama.setStanding(false);
+                System.out.println("lama is now standing <- this statement is now " + lama.isStanding());
             }
         });
-    }
 
+        System.out.println("Lama has 3 apples < this is " + Lambdas.hasThreeApples.test(lama.getLamaApples()));
+
+    }
 }
