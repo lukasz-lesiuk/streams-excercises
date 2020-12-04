@@ -1,24 +1,30 @@
 package excercises.excercise_3;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 public class StreamExercises {
 
-    public int addUp(List<Integer> numbers) {
-        return 0;
+    public static int addUp(List<Integer> numbers) {
+        return numbers.stream().reduce(0, (acc, element) -> acc + element);
     }
 
-    public List<String> namesAndOrigin(List<Artist> artists) {
-        return Collections.emptyList();
+    public static List<String> namesAndOrigin(List<Artist> artists) {
+        return artists.stream().map(artist -> (
+                artist.getName() +
+                " - " +
+                artist.getNationality()
+        )).collect(Collectors.toList());
     }
 
-    public List<Album> getAlbumsWithAtMostThreeTracks(List<Album> albums) {
-        return Collections.emptyList();
+    public static List<Album> getAlbumsWithAtMostThreeTracks(List<Album> albums) {
+        return albums
+                .stream()
+                .filter(artist -> artist.getTracks().count() <= 3)
+                .collect(Collectors.toList());
     }
 
-    public int calculateMembers(List<Artist> artists) {
+    public static int calculateMembers(List<Artist> artists) {
         int totalMembers = 0;
         for (Artist artist : artists) {
             List<Artist> members = artist.getMembers();
@@ -28,8 +34,12 @@ public class StreamExercises {
         return totalMembers;
     }
 
-    public int calculateMembersLambdaWay(List<Artist> artists) {
-        return 0;
+    public static int calculateMembersLambdaWay(List<Artist> artists) {
+        return (int) (long) artists
+                .stream()
+                .map(artist -> artist.getMembers().stream().count())
+                .reduce(0L, (acc, membersSum) -> acc + membersSum);
     }
+
 
 }

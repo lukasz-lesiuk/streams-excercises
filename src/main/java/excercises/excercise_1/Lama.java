@@ -5,6 +5,7 @@ public class Lama {
     private boolean standing = true;
     private String color = "grey";
     private int lamaApples = 3;
+    private String scream = "AAA";
 
     public void performLamaAction(Action action) {
 
@@ -33,5 +34,13 @@ public class Lama {
 
     public void setLamaApples(int lamaApples) {
         this.lamaApples = lamaApples;
+    }
+
+    public String getScream() {
+        return scream;
+    }
+
+    public void setScream(String scream) {
+        this.scream = scream;
     }
 }
