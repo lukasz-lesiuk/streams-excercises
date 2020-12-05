@@ -7,8 +7,6 @@ import excercises.excercise_3.StreamExercises;
 import excercises.excercise_3.Track;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -20,8 +18,13 @@ public class Main {
         //anonymous class
         lama.performLamaAction(new Action() {
             @Override
-            public void perform() {
+            public void perform2() {
                 System.out.println("spit");
+            }
+
+            @Override
+            public void perform() {
+                System.out.println("go away");
             }
         });
 
@@ -30,6 +33,11 @@ public class Main {
             public void perform() {
                 lama.setStanding(false);
                 System.out.println( "lama is now standing <- this statement is now " + lama.isStanding());
+            }
+
+            @Override
+            public void perform2() {
+                System.out.println("do sth else");
             }
         });
 
